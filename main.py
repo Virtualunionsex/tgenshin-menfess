@@ -4,12 +4,14 @@ import os
 import asyncio
 from pyrogram import idle
 from dotenv import load_dotenv
+
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from menfess import GenshinMF, MongoDB
 
-env_file = find_dotenv(".env.dev")
-load_dotenv(env_file)
 
 async def main():
 	load_dotenv()
