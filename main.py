@@ -8,6 +8,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 
 from menfess import GenshinMF, MongoDB
 
+env_file = find_dotenv(".env.dev")
+load_dotenv(env_file)
 
 async def main():
 	load_dotenv()
